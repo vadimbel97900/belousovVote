@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумська обл.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #000;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Адаптивные стили */
+        @media (min-width: 601px) {
+            .container {
+                padding: 20px;
+            }
+            .button {
+                display: inline-block;
+                margin: 10px;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .button-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                display: block;
+                overflow-y: auto;
+                max-height: 80vh; /* Оставляем место для других элементов и предотвращаем перекрытие */
+                padding: 0 10px;
+                /* Скрыть скроллбар для мобильных устройств */
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* Internet Explorer and Edge */
+            }
+            .button-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, and Opera */
+            }
+            .button {
+                width: calc(100% - 20px);
+                font-size: 14px;
+                padding: 10px 0;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Сумська обл.</h1>
+        <h2>Оберіть населений пункт</h2>
+        <div class="button-container">
+            <a href="rating.html" class="button">Суми</a>
+            <a href="rating.html" class="button">Ахтирка</a>
+            <a href="rating.html" class="button">Конотоп</a>
+            <a href="rating.html" class="button">Шостка</a>
+            <a href="rating.html" class="button">Лебедин</a>
+            <a href="rating.html" class="button">Глухів</a>
+            <a href="rating.html" class="button">Ромни</a>
+            <a href="rating.html" class="button">Середина-Буда</a>
+            <a href="rating.html" class="button">Юнаківка</a>
+            <a href="rating.html" class="button">Білопілля</a>
+            <a href="rating.html" class="button">Охтирка</a>
+            <a href="rating.html" class="button">Кролевець</a>
+            <a href="rating.html" class="button">Липова Долина</a>
+        </div>
+    </div>
+</body>
+</html>

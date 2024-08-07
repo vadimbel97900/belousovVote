@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народний рейтинг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #101E6B;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #ddd;
+            font-size: 16px; /* Уменьшен размер шрифта для подзаголовка */
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #101E6B;
+            background-color: #fff;
+            border: 2px solid #101E6B;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #101E6B;
+            color: #fff;
+        }
+        .button.active {
+            background-color: #fff;
+            color: #101E6B;
+            border: 2px solid #101E6B;
+            font-weight: bold;
+        }
+        .button.inactive {
+            color: #666;
+            background-color: #ddd;
+            border-color: #bbb;
+            cursor: not-allowed;
+        }
+        .button.inactive:hover {
+            background-color: #ddd;
+            color: #666;
+        }
+        .logo {
+            margin: 20px auto;
+            max-width: 150px;
+        }
+        .icon {
+            max-width: 50px;
+            margin: 10px auto;
+        }
+
+        /* Адаптивные стили */
+        @media (min-width: 601px) {
+            .container {
+                padding: 20px;
+            }
+            .button {
+                display: block;
+                margin: 10px auto;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                display: block;
+                overflow-y: auto;
+                max-height: 80vh; /* Оставляем место для других элементов и предотвращаем перекрытие */
+                padding: 0 10px;
+                /* Скрыть скроллбар для мобильных устройств */
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* Internet Explorer and Edge */
+            }
+            .button-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, and Opera */
+            }
+            .button {
+                width: calc(100% - 20px);
+                font-size: 14px;
+                padding: 10px 0;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 14px; /* Уменьшен размер шрифта для мобильных устройств */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Логотип" class="logo">
+        <h1>Народний рейтинг</h1>
+        <h2>Справжній прозорий онлайн рейтинг кандидатів, що дозволяє оцінити реальні настрої суспільства без маніпуляцій та фальсифікацій</h2>
+        <div class="button-container">
+            <a href="Логин.html" class="button">Вхід</a>
+            <a href="Логин.html" class="button">Реєстрація</a>
+        </div>
+    </div>
+</body>
+</html>

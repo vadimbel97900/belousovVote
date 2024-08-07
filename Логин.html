@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #101E6B;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #101E6B;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #101E6B;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .icon:hover {
+            opacity: 0.8;
+        }
+        .loader {
+            display: none;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #101E6B;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .success {
+            display: none;
+            color: green;
+            font-size: 24px;
+        }
+        /* Адаптивные стили */
+        @media (max-width: 600px) {
+            .icon {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Авторизація</h1>
+        <div class="icon-container">
+            <img src="DiiaLogo.svg.png" alt="Diia Logo" class="icon" onclick="showLoader()">
+            <img src="monobank-logo.png" alt="Monobank Logo" class="icon" onclick="showLoader()">
+        </div>
+        <div class="loader"></div>
+        <div class="success">✔</div>
+    </div>
+
+    <script>
+        function showLoader() {
+            var loader = document.querySelector('.loader');
+            var success = document.querySelector('.success');
+            
+            loader.style.display = 'block';
+
+            setTimeout(function() {
+                loader.style.display = 'none';
+                success.style.display = 'block';
+                setTimeout(function() {
+                    window.location.href = 'Вибір.html';
+                }, 500); // Задержка перед перенаправлением
+            }, 1500); // Задержка имитации загрузки
+        }
+    </script>
+</body>
+</html>
